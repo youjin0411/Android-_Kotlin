@@ -26,6 +26,11 @@ class MainActivity : AppCompatActivity() {
             "Clicked!",
             Toast.LENGTH_SHORT).show()
         }
+
+        //메인 스레드(=UI스레드)에서는 짧은 시간에 끝나는 코드나 UI 조작 코드만 쓰고,
+        //만약 오래 걸리는 작업이 있으면 해당 코드는 스레드를 새로 만들어서 위임해야 한다.
+        // (+만약 새로 만든 스레드에서 UI 작업을 하는 것은 허용되지 않음)]
+        // AsyncTask <= 대신 코루틴(coroutine)을 사용
         findViewById<Button>(R.id.anr).setOnClickListener{
             Thread(Runnable {
                 var sum = 0.0
