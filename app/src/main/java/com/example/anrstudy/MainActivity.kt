@@ -24,9 +24,12 @@ class MainActivity : AppCompatActivity() {
             Toast.LENGTH_SHORT).show()
         }
         findViewById<Button>(R.id.anr).setOnClickListener{
-            for(i in 1..Int.MAX_VALUE){
-                Log.d("mytag", sqrt(Random.nextDouble()).toString())
-            }
+            Thread(
+                Runnable {
+                    for(i in 1..Int.MAX_VALUE){
+                        Log.d("mytag", sqrt(Random.nextDouble()).toString())
+                    }
+                }).start()
         }
     }
 }
