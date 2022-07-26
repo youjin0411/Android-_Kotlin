@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
+import org.w3c.dom.Text
 import kotlin.math.sqrt
 import kotlin.random.Random
 
@@ -17,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val result = findViewById<TextView>(R.id.result)
 //Toast 메시지 -> 화면에 띄우는 메시지
         findViewById<Button>(R.id.btn).setOnClickListener{
             Toast.makeText(this,
@@ -31,6 +34,9 @@ class MainActivity : AppCompatActivity() {
                         Thread.sleep(100)
                     }
                 Log.d("mytag",sum.toString())
+                runOnUiThread{
+                    result.text = sum.toString()
+                }
                 }).start()
         }
     }
