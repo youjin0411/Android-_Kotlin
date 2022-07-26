@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
             "Clicked!",
             Toast.LENGTH_SHORT).show()
         }
-
         findViewById<Button>(R.id.anr).setOnClickListener{
             Thread(Runnable {
                 var sum = 0.0
