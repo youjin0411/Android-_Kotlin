@@ -7,7 +7,6 @@ import android.widget.Button
 import android.widget.Toast
 import kotlin.math.sqrt
 import kotlin.random.Random
-
 // ANR => Android Not Responding
 // 네트워크 요청 보내기 가정
 // 3초 정도 걸린다고 가정
