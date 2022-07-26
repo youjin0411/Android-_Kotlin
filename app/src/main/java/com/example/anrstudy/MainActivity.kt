@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.anr).setOnClickListener{
             Thread(
-                Runnable {
+                {
                     for(i in 1..60){
                         Log.d("mytag", sqrt(Random.nextDouble()).toString())
                     }
