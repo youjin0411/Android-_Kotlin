@@ -13,6 +13,7 @@ import kotlin.random.Random
 // 3초 정도 걸린다고 가정
 // 데이터베이스에 데이터를 가져오는 것도 ANR 유발 가능
 
+//arr 버튼을 누르면 계산이 이루어지는 데 계산이 이루어지는 스레드는 메인스러드 (=UI스레드)임
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
